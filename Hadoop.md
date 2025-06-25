@@ -7,7 +7,7 @@ Este tutorial te guiará a través del proceso de instalación y configuración 
 
 ## Requisitos Previos
 
-*   **Sistema Operativo:** Ubuntu 18.04 64-bit (también compatible con Ubuntu 14.04 y 16.04, 32/64-bit).
+*   **Sistema Operativo:** Ubuntu 24.04.2-bit (también compatible con Ubuntu 18.04 64, 14.04 y 16.04, 32/64-bit).
 *   Se asume que ya tienes una instalación limpia de Ubuntu.
 
 ---
