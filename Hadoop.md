@@ -1,6 +1,3 @@
-¡Claro! Aquí tienes el contenido que proporcionaste, estructurado y formateado como un archivo `README.md` profesional y fácil de seguir.
-
-He organizado el tutorial en secciones numeradas, he utilizado bloques de código con resaltado de sintaxis, y he añadido notas y advertencias para mejorar la legibilidad y la comprensión.
 
 ---
 
