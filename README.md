@@ -7,7 +7,7 @@ Este repositorio contiene el contenido del curso práctico de **Big Data**, enfo
 
 ## 🧩 Temario del Curso
 
-1. **Instalación de una Máquina Virtual de Ubuntu con VirtualBox en Windows**
+1. **Instalación de una Máquina Virtual de Ubuntu con VirtualBox o VMWare en Windows**
    - Configuración paso a paso de un entorno de trabajo seguro y estable.
    - Preparación del sistema operativo para las herramientas de Big Data.
 
