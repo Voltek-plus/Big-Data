@@ -232,9 +232,13 @@ cat ./output/*
 
 ### Modo Pseudo-Distribuido
 
-En este modo, todos los demonios de Hadoop (NameNode, DataNode, etc.) se ejecutan como procesos Java separados en un único nodo.
+Hadoop puede ejecutarse en un solo nodo de una manera pseudodistribuida, los procesos Hadoop se ejecutan como procesos Java separados, nodos como NameNode y como DataNode, y, al mismo tiempo, leer archivos en HDFS.
 
-Necesitamos modificar dos archivos de configuración: `core-site.xml` y `hdfs-site.xml`.
+
+Los archivos de configuración de Hadoop se encuentran en /usr/local/hadoop/etc/hadoop/, y la necesidad pseudodistribuida de modificar los dos archivos de configuración `core-site.xml` y `hdfs-site.xml` . Los archivos de configuración de Hadoop están en formato XML, y cada configuración se implementa de una manera que declara el nombre y el valor de la propiedad.
+
+Modificar el archivo de configuración core-site.xml (Editar con gedit es más fácil: gedit ./etc/hadoop/core-site.xml); estará en ella.
+
 
 1.  **Edita `core-site.xml`:**
 
@@ -278,6 +282,9 @@ Necesitamos modificar dos archivos de configuración: `core-site.xml` y `hdfs-si
         <value>file:/usr/local/hadoop/tmp/dfs/data</value>
     </property>
     ```
+descripción del archivo de configuración de Hadoop :
+
+Hadoop opera de una manera que está determinada por el archivo de configuración (que se leerá cuando Hadoop se ejecute), así que si necesita cambiar de nuevo a un modo no distribuido desde un modo pseudodistribuido, debe eliminar el elemento de configuración en core-site.xml.
 
 3.  **Formatea el NameNode:**
     Este paso inicializa el sistema de archivos HDFS. **¡Solo se debe hacer la primera vez!**
