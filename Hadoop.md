@@ -180,7 +180,7 @@ Java HotSpot(TM) 64-Bit Server VM (build 25.162-b12, mixed mode)
 
 ## 5. Instalación de Hadoop 3.1.3
 
-1.  Descarga `hadoop-3.1.3.tar.gz` desde el [sitio web oficial de Apache Hadoop](https://hadoop.apache.org/releases.html) o la fuente proporcionada en tu tutorial. Asumiremos que está en `~/Downloads`.
+1.  Descarga `hadoop-3.1.3.tar.gz` desde el [sitio web oficial de Apache Hadoop](https://hadoop.apache.org/release/3.1.3.html) o la fuente proporcionada en tu tutorial. Asumiremos que está en `~/Downloads`.
 
 2.  Instala Hadoop en el directorio `/usr/local`.
 
@@ -237,7 +237,7 @@ Hadoop puede ejecutarse en un solo nodo de una manera pseudodistribuida, los pro
 
 Los archivos de configuración de Hadoop se encuentran en /usr/local/hadoop/etc/hadoop/, y la necesidad pseudodistribuida de modificar los dos archivos de configuración `core-site.xml` y `hdfs-site.xml` . Los archivos de configuración de Hadoop están en formato XML, y cada configuración se implementa de una manera que declara el nombre y el valor de la propiedad.
 
-Modificar el archivo de configuración core-site.xml (Editar con gedit es más fácil: gedit ./etc/hadoop/core-site.xml); estará en ella.
+Modificar el archivo de configuración core-site.xml (Editar con gedit es más fácil: `gedit ./etc/hadoop/core-site.xml`); estará en ella.
 
 
 1.  **Edita `core-site.xml`:**
@@ -290,6 +290,7 @@ Hadoop opera de una manera que está determinada por el archivo de configuració
     Este paso inicializa el sistema de archivos HDFS. **¡Solo se debe hacer la primera vez!**
 
     ```bash
+    cd /usr/local/hadoop
     ./bin/hdfs namenode -format
     ```
 
@@ -297,10 +298,12 @@ Hadoop opera de una manera que está determinada por el archivo de configuració
 
     > **Solución de Problemas:** Si recibes un error `Error: JAVA_HOME is not set`, significa que la variable de entorno no se ha configurado correctamente. Ve al directorio de instalación de Hadoop y edita el archivo `./etc/hadoop/hadoop-env.sh`. Descomenta y modifica la línea `export JAVA_HOME` para que apunte a tu directorio de Java, por ejemplo: `export JAVA_HOME=/usr/lib/jvm/jdk1.8.0_162`.
 
-4.  **Inicia los demonios de Hadoop:**
+4.  **Inicia los procesos de NameNode y DataNode:**
 
     ```bash
+    cd /usr/local/hadoop
     ./sbin/start-dfs.sh
+
     ```
 
 5.  **Verifica que los procesos se están ejecutando:**
