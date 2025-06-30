@@ -249,6 +249,7 @@ Modificar el archivo de configuración core-site.xml (Editar con gedit es más f
     Añade la siguiente configuración entre las etiquetas `<configuration>` y `</configuration>`:
 
     ```xml
+    <configuration>
     <property>
         <name>hadoop.tmp.dir</name>
         <value>file:/usr/local/hadoop/tmp</value>
@@ -258,6 +259,7 @@ Modificar el archivo de configuración core-site.xml (Editar con gedit es más f
         <name>fs.defaultFS</name>
         <value>hdfs://localhost:9000</value>
     </property>
+</configuration>
     ```
 
 2.  **Edita `hdfs-site.xml`:**
@@ -269,6 +271,7 @@ Modificar el archivo de configuración core-site.xml (Editar con gedit es más f
     Añade la siguiente configuración:
 
     ```xml
+    <configuration>
     <property>
         <name>dfs.replication</name>
         <value>1</value>
@@ -281,6 +284,7 @@ Modificar el archivo de configuración core-site.xml (Editar con gedit es más f
         <name>dfs.datanode.data.dir</name>
         <value>file:/usr/local/hadoop/tmp/dfs/data</value>
     </property>
+</configuration>
     ```
 descripción del archivo de configuración de Hadoop :
 
